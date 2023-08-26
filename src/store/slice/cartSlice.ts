@@ -19,9 +19,11 @@ export const counterSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state,actions:PayloadAction<any>) => {
-     state.totalQuantity+=actions.payload.quantity
+      // console.log(actions)
+      state.totalQuantity += actions.payload.quantity
     },
     removeFromCart: (state,actions:PayloadAction<any>) => {
+      // console.log(actions)
       state.totalQuantity -= actions.payload.quantity
     },
     clearCart: (state) => {
